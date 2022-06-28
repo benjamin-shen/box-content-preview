@@ -29,6 +29,7 @@ class ImageViewer extends ImageBaseViewer {
         this.handleAnnotationControlsClick = this.handleAnnotationControlsClick.bind(this);
         this.handleAnnotationCreateEvent = this.handleAnnotationCreateEvent.bind(this);
         this.handleAssetAndRepLoad = this.handleAssetAndRepLoad.bind(this);
+        this.handleEditImageClick = this.handleEditImageClick.bind(this);
         this.handleImageDownloadError = this.handleImageDownloadError.bind(this);
         this.handleZoomEvent = this.handleZoomEvent.bind(this);
         this.rotateLeft = this.rotateLeft.bind(this);
@@ -400,6 +401,7 @@ class ImageViewer extends ImageBaseViewer {
                 onAnnotationColorChange={this.handleAnnotationColorChange}
                 onAnnotationModeClick={this.handleAnnotationControlsClick}
                 onAnnotationModeEscape={this.handleAnnotationControlsEscape}
+                onEditImageClick={this.handleEditImageClick}
                 onFullscreenToggle={this.toggleFullscreen}
                 onRotateLeft={this.rotateLeft}
                 onZoomIn={this.zoomIn}
@@ -568,6 +570,30 @@ class ImageViewer extends ImageBaseViewer {
         if (this.areNewAnnotationsEnabled()) {
             this.annotator.addListener('annotations_create', this.handleAnnotationCreateEvent);
         }
+    }
+
+    /**
+     * Handler for edit image button click event.
+     *
+     * @private
+     * @return {void}
+     */
+    handleEditImageClick() {
+        this.currentRotationAngle = ((this.currentRotationAngle + 90) % 3600) % 360;
+        this.imageEl.setAttribute('data-rotation-angle', this.currentRotationAngle);
+        this.imageEl.style.transform = `rotate(${this.currentRotationAngle}deg)`;
+        this.emit('rotate');
+
+        // Disallow creating annotations on rotated images
+        if (this.currentRotationAngle === 0) {
+            this.enableAnnotationControls();
+        } else {
+            this.disableAnnotationControls();
+        }
+
+        // Re-adjust image position after rotation
+        this.handleOrientationChange();
+        this.setScale(this.imageEl.offsetwidth, this.imageEl.offsetHeight);
     }
 
     updateDiscoverabilityResinTag() {
