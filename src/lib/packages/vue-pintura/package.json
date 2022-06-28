@@ -1,0 +1,12 @@
+{
+    "private": true,
+    "version": "8.31.2",
+    "name": "@pqina/vue-pintura",
+    "browser": "index.js",
+    "main": "index.js",
+    "peerDependencies": {
+        "vue": "2.x - 3.x",
+        "@pqina/pintura": "8.x"
+    },
+    "license": "https://pqina.nl/pintura/license"
+}

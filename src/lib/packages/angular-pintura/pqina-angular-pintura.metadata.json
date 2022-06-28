@@ -1,0 +1,2799 @@
+{
+    "__symbolic": "module",
+    "version": 4,
+    "metadata": {
+        "PinturaEditorComponent": {
+            "__symbolic": "class",
+            "arity": 1,
+            "extends": { "__symbolic": "reference", "name": "ɵa" },
+            "decorators": [
+                {
+                    "__symbolic": "call",
+                    "expression": {
+                        "__symbolic": "reference",
+                        "module": "@angular/core",
+                        "name": "Component",
+                        "line": 4,
+                        "character": 1
+                    },
+                    "arguments": [
+                        { "selector": "pintura-editor", "template": " <ng-content></ng-content> ", "styles": [] }
+                    ]
+                }
+            ],
+            "members": { "initEditor": [{ "__symbolic": "method" }] }
+        },
+        "PinturaEditorModalComponent": {
+            "__symbolic": "class",
+            "arity": 1,
+            "extends": { "__symbolic": "reference", "name": "ɵa" },
+            "decorators": [
+                {
+                    "__symbolic": "call",
+                    "expression": {
+                        "__symbolic": "reference",
+                        "module": "@angular/core",
+                        "name": "Component",
+                        "line": 4,
+                        "character": 1
+                    },
+                    "arguments": [
+                        { "selector": "pintura-editor-modal", "template": " <ng-content></ng-content> ", "styles": [] }
+                    ]
+                }
+            ],
+            "members": {
+                "preventZoomViewport": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 13,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "preventScrollBodyIfNeeded": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 14,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "preventFooterOverlapIfNeeded": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 15,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "enableAutoHide": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 16,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "enableAutoDestroy": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 17,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "initEditor": [{ "__symbolic": "method" }],
+                "showEditor": [{ "__symbolic": "method" }],
+                "hideEditor": [{ "__symbolic": "method" }],
+                "ngOnDestroy": [{ "__symbolic": "method" }]
+            }
+        },
+        "PinturaEditorOverlayComponent": {
+            "__symbolic": "class",
+            "arity": 1,
+            "extends": { "__symbolic": "reference", "name": "ɵa" },
+            "decorators": [
+                {
+                    "__symbolic": "call",
+                    "expression": {
+                        "__symbolic": "reference",
+                        "module": "@angular/core",
+                        "name": "Component",
+                        "line": 4,
+                        "character": 1
+                    },
+                    "arguments": [
+                        {
+                            "selector": "pintura-editor-overlay",
+                            "template": " <ng-content></ng-content> ",
+                            "styles": []
+                        }
+                    ]
+                }
+            ],
+            "members": { "initEditor": [{ "__symbolic": "method" }] }
+        },
+        "AngularPinturaModule": {
+            "__symbolic": "class",
+            "decorators": [
+                {
+                    "__symbolic": "call",
+                    "expression": {
+                        "__symbolic": "reference",
+                        "module": "@angular/core",
+                        "name": "NgModule",
+                        "line": 5,
+                        "character": 1
+                    },
+                    "arguments": [
+                        {
+                            "declarations": [
+                                { "__symbolic": "reference", "name": "PinturaEditorComponent" },
+                                { "__symbolic": "reference", "name": "PinturaEditorModalComponent" },
+                                { "__symbolic": "reference", "name": "PinturaEditorOverlayComponent" }
+                            ],
+                            "imports": [],
+                            "exports": [
+                                { "__symbolic": "reference", "name": "PinturaEditorComponent" },
+                                { "__symbolic": "reference", "name": "PinturaEditorModalComponent" },
+                                { "__symbolic": "reference", "name": "PinturaEditorOverlayComponent" }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "members": {}
+        },
+        "ɵa": {
+            "__symbolic": "class",
+            "arity": 1,
+            "decorators": [
+                {
+                    "__symbolic": "call",
+                    "expression": {
+                        "__symbolic": "reference",
+                        "module": "@angular/core",
+                        "name": "Component",
+                        "line": 46,
+                        "character": 1
+                    },
+                    "arguments": [
+                        { "selector": "pintura-editor", "template": " <ng-content></ng-content> ", "styles": [] }
+                    ]
+                }
+            ],
+            "members": {
+                "options": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 60,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "id": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 63,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "class": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 64,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "animations": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 65,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "src": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 66,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "util": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 67,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "utils": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 68,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "disabled": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 69,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "status": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 70,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "elasticityMultiplier": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 71,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "layoutDirectionPreference": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 72,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "layoutVerticalUtilsPreference": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 73,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "layoutHorizontalUtilsPreference": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 74,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageSourceToImageData": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 75,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "previewImageData": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 76,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "previewImageDataMaxSize": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 77,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "previewUpscale": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 78,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "shapePreprocessor": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 79,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "enableButtonClose": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 80,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "enableButtonExport": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 81,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "enableButtonResetHistory": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 82,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "enableButtonRevert": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 83,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "enableNavigateHistory": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 84,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "enableToolbar": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 85,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "enableUtils": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 86,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "enableDropImage": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 87,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "enablePasteImage": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 88,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "handleEvent": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 89,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "willRequestResource": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 90,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "willClose": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 91,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "willRevert": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 92,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "willProcessImage": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 93,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "willRenderCanvas": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 94,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "willSetHistoryInitialState": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 106,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "willRenderToolbar": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 107,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "beforeSelectShape": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 112,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "beforeDeselectShape": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 113,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "beforeAddShape": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 114,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "beforeRemoveShape": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 115,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "beforeUpdateShape": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 116,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "willRenderShapeControls": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 117,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "willRenderShapePresetToolbar": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 118,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "locale": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 125,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageReader": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 126,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageWriter": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 127,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageOrienter": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 128,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageScrambler": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 129,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageBackgroundColor": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 132,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageColorMatrix": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 133,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageConvolutionMatrix": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 134,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageCrop": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 135,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageCropAspectRatio": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 136,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageCropLimitToImage": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 137,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageCropMaxSize": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 138,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageCropMinSize": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 139,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageRedaction": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 140,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageAnnotation": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 141,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageDecoration": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 142,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageFlipX": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 143,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageFlipY": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 144,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageGamma": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 145,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageNoise": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 146,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageRotation": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 147,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageVignette": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 148,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageTargetSize": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 149,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageFrame": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 150,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageMetadata": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 156,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "imageState": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 157,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "markupEditorToolbar": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 191,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "markupEditorToolStyles": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 192,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "markupEditorShapeStyleControls": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 193,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "markupEditorToolSelectRadius": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 194,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "markupEditorTextInputMode": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 195,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "enableSelectToolToAddShape": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 196,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "enableTapToAddText": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 197,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "enableZoom": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 198,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "enablePan": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 199,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "enableZoomControls": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 200,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "markupEditorZoomLevels": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 201,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "markupEditorZoomAdjustStep": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 202,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "markupEditorZoomAdjustFactor": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 203,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "markupEditorWillStartInteraction": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 204,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropAutoCenterImageSelectionTimeout": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 207,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropWillRenderImageSelectionGuides": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 208,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropEnableButtonFlipHorizontal": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 214,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropEnableButtonFlipVertical": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 215,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropEnableButtonRotateLeft": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 216,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropEnableButtonRotateRight": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 217,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropEnableButtonToggleCropLimit": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 218,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropEnableCenterImageSelection": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 219,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropEnableImageSelection": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 220,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropEnableInfoIndicator": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 221,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropEnableLimitWheelInputToCropSelection": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 222,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropEnableRotationInput": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 223,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropEnableSelectPreset": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 224,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropEnableZoomInput": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 225,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropEnableZoomMatchImageAspectRatio": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 226,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropEnableZoomTowardsWheelPosition": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 227,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropEnableZoomAutoHide": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 228,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropImageSelectionCornerStyle": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 229,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropSelectPresetOptions": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 230,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropEnableRotateMatchImageAspectRatio": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 231,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "cropWillRenderTools": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 232,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "annotateActiveTool": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 238,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "annotateEnableButtonFlipVertical": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 239,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "annotatePresets": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 240,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "decorateActiveTool": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 242,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "decorateEnableButtonFlipVertical": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 243,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "decoratePresets": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 244,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "filterFunctions": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 246,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "filterOptions": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 247,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "finetuneControlConfiguration": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 249,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "finetuneOptions": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 250,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "resizeMaxSize": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 252,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "resizeMinSize": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 253,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "resizeSizePresetOptions": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 254,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "resizeWidthPresetOptions": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 255,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "resizeHeightPresetOptions": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 256,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "resizeWillRenderFooter": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 257,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "frameStyles": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 263,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "frameOptions": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 272,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "stickers": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 274,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "stickerStickToImage": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 275,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "stickersEnableButtonFlipVertical": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Input",
+                                    "line": 276,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "init": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 279,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "loadstart": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 280,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "loadabort": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 281,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "loaderror": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 282,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "loadprogress": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 283,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "load": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 284,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "processstart": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 286,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "processabort": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 287,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "processerror": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 288,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "processprogress": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 289,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "process": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 291,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "update": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 293,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "undo": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 294,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "redo": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 295,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "revert": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 296,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "destroy": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 297,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "show": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 298,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "hide": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 299,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "close": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 300,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "ready": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 301,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "loadpreview": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 302,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "addshape": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 305,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "selectshape": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 306,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "updateshape": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 307,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "removeshape": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 308,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "selectstyle": [
+                    {
+                        "__symbolic": "property",
+                        "decorators": [
+                            {
+                                "__symbolic": "call",
+                                "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/core",
+                                    "name": "Output",
+                                    "line": 309,
+                                    "character": 5
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "__ctor__": [
+                    {
+                        "__symbolic": "constructor",
+                        "parameters": [
+                            {
+                                "__symbolic": "reference",
+                                "module": "@angular/core",
+                                "name": "ElementRef",
+                                "line": 313,
+                                "character": 25
+                            },
+                            {
+                                "__symbolic": "reference",
+                                "module": "@angular/core",
+                                "name": "NgZone",
+                                "line": 313,
+                                "character": 43
+                            }
+                        ]
+                    }
+                ],
+                "initEditor": [{ "__symbolic": "method" }],
+                "ngAfterViewInit": [{ "__symbolic": "method" }],
+                "ngOnChanges": [{ "__symbolic": "method" }],
+                "ngOnDestroy": [{ "__symbolic": "method" }],
+                "ngOnInit": [{ "__symbolic": "method" }]
+            }
+        }
+    },
+    "origins": {
+        "PinturaEditorComponent": "./lib/pintura-editor.component",
+        "PinturaEditorModalComponent": "./lib/pintura-editor-modal.component",
+        "PinturaEditorOverlayComponent": "./lib/pintura-editor-overlay.component",
+        "AngularPinturaModule": "./lib/angular-pintura.module",
+        "ɵa": "./lib/pintura-editor-abstract.component"
+    },
+    "importAs": "@pqina/angular-pintura"
+}

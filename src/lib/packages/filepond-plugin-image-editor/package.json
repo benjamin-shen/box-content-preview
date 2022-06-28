@@ -1,0 +1,10 @@
+{
+    "private": true,
+    "version": "8.31.2",
+    "name": "@pqina/filepond-plugin-image-editor",
+    "browser": "FilePondPluginImageEditor.esm.js",
+    "main": "FilePondPluginImageEditor.esm.js",
+    "types": "FilePondPluginImageEditor.d.ts",
+    "type": "module",
+    "license": "https://pqina.nl/pintura/license"
+}

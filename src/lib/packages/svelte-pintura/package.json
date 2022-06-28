@@ -1,0 +1,13 @@
+{
+    "private": true,
+    "version": "8.31.2",
+    "name": "@pqina/svelte-pintura",
+    "browser": "index.js",
+    "main": "index.js",
+    "svelte": "index.js",
+    "type": "module",
+    "peerDependencies": {
+        "@pqina/pintura": "8.x"
+    },
+    "license": "https://pqina.nl/pintura/license"
+}

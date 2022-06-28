@@ -1,0 +1,22 @@
+{
+    "name": "@pqina/angular-pintura",
+    "version": "8.31.2",
+    "peerDependencies": {
+        "@angular/common": "9.x - 13.*",
+        "@angular/core": "9.x - 13.*",
+        "@pqina/pintura": "8.x"
+    },
+    "dependencies": {
+        "tslib": "^2.0.0"
+    },
+    "main": "bundles/pqina-angular-pintura.umd.js",
+    "module": "fesm2015/pqina-angular-pintura.js",
+    "es2015": "fesm2015/pqina-angular-pintura.js",
+    "esm2015": "esm2015/pqina-angular-pintura.js",
+    "fesm2015": "fesm2015/pqina-angular-pintura.js",
+    "typings": "pqina-angular-pintura.d.ts",
+    "metadata": "pqina-angular-pintura.metadata.json",
+    "sideEffects": false,
+    "private": true,
+    "license": "https://pqina.nl/pintura/license"
+}

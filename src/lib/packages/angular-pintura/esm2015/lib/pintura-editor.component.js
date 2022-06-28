@@ -1,0 +1,15 @@
+import { Component } from '@angular/core';
+import { appendEditor } from '@pqina/pintura';
+import { PinturaEditorAbstractComponent } from './pintura-editor-abstract.component';
+export class PinturaEditorComponent extends PinturaEditorAbstractComponent {
+    initEditor(element, props) {
+        return appendEditor(element, props);
+    }
+}
+PinturaEditorComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'pintura-editor',
+                template: ` <ng-content></ng-content> `
+            },] }
+];
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGludHVyYS1lZGl0b3IuY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6Ii4uLy4uLy4uL3NyYy9hbmd1bGFyLXBpbnR1cmEvcHJvamVjdHMvYW5ndWxhci1waW50dXJhL3NyYy8iLCJzb3VyY2VzIjpbImxpYi9waW50dXJhLWVkaXRvci5jb21wb25lbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLFNBQVMsRUFBVSxNQUFNLGVBQWUsQ0FBQztBQUNsRCxPQUFPLEVBQUUsWUFBWSxFQUF1QyxNQUFNLGdCQUFnQixDQUFDO0FBQ25GLE9BQU8sRUFBRSw4QkFBOEIsRUFBRSxNQUFNLHFDQUFxQyxDQUFDO0FBT3JGLE1BQU0sT0FBTyxzQkFBMEIsU0FBUSw4QkFBaUM7SUFDNUUsVUFBVSxDQUFDLE9BQW9CLEVBQUUsS0FBMkI7UUFDeEQsT0FBTyxZQUFZLENBQUMsT0FBTyxFQUFFLEtBQUssQ0FBQyxDQUFDO0lBQ3hDLENBQUM7OztZQVJKLFNBQVMsU0FBQztnQkFDUCxRQUFRLEVBQUUsZ0JBQWdCO2dCQUMxQixRQUFRLEVBQUUsNkJBQTZCO2FBRTFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tcG9uZW50LCBPbkluaXQgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IGFwcGVuZEVkaXRvciwgUGludHVyYUVkaXRvciwgUGludHVyYUVkaXRvck9wdGlvbnMgfSBmcm9tICdAcHFpbmEvcGludHVyYSc7XG5pbXBvcnQgeyBQaW50dXJhRWRpdG9yQWJzdHJhY3RDb21wb25lbnQgfSBmcm9tICcuL3BpbnR1cmEtZWRpdG9yLWFic3RyYWN0LmNvbXBvbmVudCc7XG5cbkBDb21wb25lbnQoe1xuICAgIHNlbGVjdG9yOiAncGludHVyYS1lZGl0b3InLFxuICAgIHRlbXBsYXRlOiBgIDxuZy1jb250ZW50PjwvbmctY29udGVudD4gYCxcbiAgICBzdHlsZXM6IFtdLFxufSlcbmV4cG9ydCBjbGFzcyBQaW50dXJhRWRpdG9yQ29tcG9uZW50PFQ+IGV4dGVuZHMgUGludHVyYUVkaXRvckFic3RyYWN0Q29tcG9uZW50PFQ+IGltcGxlbWVudHMgT25Jbml0IHtcbiAgICBpbml0RWRpdG9yKGVsZW1lbnQ6IEhUTUxFbGVtZW50LCBwcm9wczogUGludHVyYUVkaXRvck9wdGlvbnMpOiBQaW50dXJhRWRpdG9yIHtcbiAgICAgICAgcmV0dXJuIGFwcGVuZEVkaXRvcihlbGVtZW50LCBwcm9wcyk7XG4gICAgfVxufVxuIl19
