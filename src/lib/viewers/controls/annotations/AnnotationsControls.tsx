@@ -1,9 +1,7 @@
 import React from 'react';
 import noop from 'lodash/noop';
-import { bdlBoxBlue } from 'box-ui-elements/es/styles/variables';
 import AnnotationsButton from './AnnotationsButton';
 import AnnotationsTargetedTooltip from './AnnotationsTargetedTooltip';
-import IconDrawing24 from '../icons/IconDrawing24';
 import IconExit24 from '../icons/IconExit24';
 import IconHighlightText16 from '../icons/IconHighlightText16';
 import IconRegion24 from '../icons/IconRegion24';
@@ -22,7 +20,6 @@ export type Props = {
 };
 
 export default function AnnotationsControls({
-    annotationColor = bdlBoxBlue,
     annotationMode = AnnotationMode.NONE,
     hasDrawing = false,
     hasHighlight = false,
@@ -82,8 +79,6 @@ export default function AnnotationsControls({
         return null;
     }
 
-    const isDrawingActive = annotationMode === AnnotationMode.DRAWING;
-
     return (
         <div className="bp-AnnotationsControls">
             <AnnotationsButton
@@ -96,18 +91,6 @@ export default function AnnotationsControls({
                 title={__('exit_annotations')}
             >
                 <IconExit24 />
-            </AnnotationsButton>
-            <AnnotationsButton
-                ref={annotationBtnRefs[AnnotationMode.DRAWING]}
-                data-resin-target="draw"
-                data-testid="bp-AnnotationsControls-drawBtn"
-                isActive={isDrawingActive}
-                isEnabled={showDrawing}
-                mode={AnnotationMode.DRAWING}
-                onClick={handleModeClick}
-                title={__('drawing_comment')}
-            >
-                <IconDrawing24 fill={isDrawingActive ? annotationColor : '#fff'} />
             </AnnotationsButton>
             <AnnotationsTargetedTooltip isEnabled={showRegion}>
                 <AnnotationsButton
