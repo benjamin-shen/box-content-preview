@@ -1,0 +1,5 @@
+@import '../styles';
+
+.bp-EditControl {
+    @include bp-Control;
+}
