@@ -57,17 +57,17 @@
     }
 }
 
-.PinturaRoot .PinturaButtonExport {
+.PinturaRoot .PinturaNavGroup .PinturaButtonExport {
+    height: 40px;
     color: white;
     background-color: var(--color-primary);
     background-image: url(https://media.istockphoto.com/photos/background-of-galaxy-and-stars-picture-id1035676256?b=1&k=20&m=1035676256&s=170667a&w=0&h=NOtiiFfDhhUhZgQ4wZmHPXxHvt3RFVD-lTmnWCeyIG4=);
-    height: 40px;
-};
+}
 
-.PinturaRoot .PinturaButtonInner .PinturaButtonLabel {
+.PinturaRoot .PinturaNavGroup .PinturaButtonInner .PinturaButtonLabel {
+    color: #fff;
     font-weight: bold;
     font-size: 14px !important;
-    color: #fff;
 }
 
 .notification.error {
