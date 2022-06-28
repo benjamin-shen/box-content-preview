@@ -143,7 +143,6 @@ class ImageViewer extends ImageBaseViewer {
         this.imageEl = this.wrapperEl.appendChild(document.createElement('img'));
         this.imageEl.setAttribute('crossorigin', 'anonymous');
         this.imageEl.setAttribute('data-page-number', 1);
-        this.imageEl.setAttribute('crossorigin', 'anonymous');
 
         // hides image tag until content is loaded
         this.imageEl.classList.add(CLASS_INVISIBLE);
