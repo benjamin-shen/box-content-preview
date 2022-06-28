@@ -33,9 +33,9 @@ class ImageViewer extends ImageBaseViewer {
         this.handleAnnotationCreateEvent = this.handleAnnotationCreateEvent.bind(this);
         this.handleAssetAndRepLoad = this.handleAssetAndRepLoad.bind(this);
         this.handleEditImageClick = this.handleEditImageClick.bind(this);
-        this.loadImageEditor = this.loadImageEditor.bind(this);
         this.handleImageDownloadError = this.handleImageDownloadError.bind(this);
         this.handleZoomEvent = this.handleZoomEvent.bind(this);
+        this.loadImageEditor = this.loadImageEditor.bind(this);
         this.rotateLeft = this.rotateLeft.bind(this);
         this.updateDiscoverabilityResinTag = this.updateDiscoverabilityResinTag.bind(this);
         this.updateExperiences = this.updateExperiences.bind(this);
@@ -54,19 +54,22 @@ class ImageViewer extends ImageBaseViewer {
     }
 
     loadImageEditor() {
+        const previewEl = document.querySelector('.preview-body');
         const pinturaEl = document.createElement('div');
+
         pinturaEl.classList.add('pintura');
         pinturaEl.style.height = '100%';
         pinturaEl.style.width = '100%';
-        document.querySelector('.bp-content').appendChild(pinturaEl);
 
-        const imageEl = document.querySelector('.bp-image');
-        imageEl.style.display = 'none';
+        previewEl.appendChild(pinturaEl);
+        previewEl.removeChild(previewEl.firstChild);
 
-        console.log('HOLA SRC', this.imageEl.getAttribute('src'));
         appendDefaultEditor('.pintura', {
             src: this.imageEl.getAttribute('src'),
         });
+
+        // Remove header buttons
+        document.querySelector('.preview-header-right').remove();
     }
 
     /**
@@ -97,6 +100,7 @@ class ImageViewer extends ImageBaseViewer {
         this.wrapperEl.classList.add(CSS_CLASS_IMAGE);
 
         this.imageEl = this.wrapperEl.appendChild(document.createElement('img'));
+        this.imageEl.setAttribute('crossorigin', 'anonymous');
         this.imageEl.setAttribute('data-page-number', 1);
 
         // hides image tag until content is loaded
