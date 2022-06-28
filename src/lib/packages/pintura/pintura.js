@@ -46465,7 +46465,7 @@ var _locale_en_gb = {
     labelButtonUndo: 'Undo',
     labelButtonRedo: 'Redo',
     labelButtonRevert: 'Revert',
-    labelButtonExport: 'Done',
+    labelButtonExport: 'Live long and prosper',
 
     // zoom
     labelZoomIn: 'Zoom in',
