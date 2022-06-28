@@ -1,15 +1,19 @@
 import React from 'react';
 import AnnotationsControls, { Props as AnnotationsControlsProps } from '../controls/annotations';
 import ControlsBar, { ControlsBarGroup } from '../controls/controls-bar';
+// import DrawingControls, { Props as DrawingControlsProps } from '../controls/annotations/DrawingControls';
 import ExperiencesProvider, { Props as ExperiencesProviderProps } from '../controls/experiences';
 import FullscreenToggle, { Props as FullscreenToggleProps } from '../controls/fullscreen';
 import EditControl, { Props as EditControlProps } from '../controls/edit';
+// import RotateControl, { Props as RotateControlProps } from '../controls/rotate';
 import ZoomControls, { Props as ZoomControlsProps } from '../controls/zoom';
 
 export type Props = AnnotationsControlsProps &
+    // DrawingControlsProps &
     EditControlProps &
     ExperiencesProviderProps &
     FullscreenToggleProps &
+    // RotateControlProps &
     ZoomControlsProps;
 
 export default function ImageControls({
@@ -19,10 +23,12 @@ export default function ImageControls({
     hasDrawing,
     hasHighlight,
     hasRegion,
+    // onAnnotationColorChange,
     onAnnotationModeClick,
     onAnnotationModeEscape,
     onEditImageClick,
     onFullscreenToggle,
+    // onRotateLeft,
     onZoomIn,
     onZoomOut,
     scale,
@@ -46,6 +52,13 @@ export default function ImageControls({
                     />
                     <EditControl onEditImageClick={onEditImageClick} />
                 </ControlsBarGroup>
+                {/* <ControlsBar>
+                    <DrawingControls
+                        annotationColor={annotationColor}
+                        annotationMode={annotationMode}
+                        onAnnotationColorChange={onAnnotationColorChange}
+                    />
+                </ControlsBar> */}
             </ControlsBar>
         </ExperiencesProvider>
     );
