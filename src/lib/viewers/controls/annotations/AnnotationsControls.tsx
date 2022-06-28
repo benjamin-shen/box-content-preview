@@ -1,9 +1,7 @@
 import React from 'react';
 import noop from 'lodash/noop';
-import { bdlBoxBlue } from 'box-ui-elements/es/styles/variables';
 import AnnotationsButton from './AnnotationsButton';
 import AnnotationsTargetedTooltip from './AnnotationsTargetedTooltip';
-import IconDrawing24 from '../icons/IconDrawing24';
 import IconExit24 from '../icons/IconExit24';
 import IconHighlightText16 from '../icons/IconHighlightText16';
 import IconRegion24 from '../icons/IconRegion24';
@@ -22,7 +20,6 @@ export type Props = {
 };
 
 export default function AnnotationsControls({
-    annotationColor = bdlBoxBlue,
     annotationMode = AnnotationMode.NONE,
     hasDrawing = false,
     hasHighlight = false,
@@ -81,8 +78,6 @@ export default function AnnotationsControls({
     if (!showDrawing && !showHighlight && !showRegion) {
         return null;
     }
-
-    const isDrawingActive = annotationMode === AnnotationMode.DRAWING;
 
     return (
         <div className="bp-AnnotationsControls">
