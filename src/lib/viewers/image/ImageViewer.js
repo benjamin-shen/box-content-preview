@@ -14,6 +14,7 @@ import {
 } from '../../constants';
 import './Image.scss';
 import '../../packages/pintura/pintura.css';
+import { getHeaders } from '../../util';
 
 const CSS_CLASS_IMAGE = 'bp-image';
 const IMAGE_PADDING = 15;
@@ -64,12 +65,52 @@ class ImageViewer extends ImageBaseViewer {
         previewEl.appendChild(pinturaEl);
         previewEl.removeChild(previewEl.firstChild);
 
-        appendDefaultEditor('.pintura', {
+        const editor = appendDefaultEditor('.pintura', {
             src: this.imageEl.getAttribute('src'),
         });
 
         // Remove header buttons
         document.querySelector('.preview-header-right').remove();
+        console.log(this.options);
+
+        editor.on('process', imageWriterResult => {
+            const { token } = this.options;
+            const headers = getHeaders({ 'Content-Type': 'multipart/form-data' }, token);
+            const getBase64FromUrl = async url => {
+                const data = await fetch(url);
+                const blob = await data.blob();
+                return new Promise(resolve => {
+                    const reader = new FileReader();
+                    reader.readAsDataURL(blob);
+                    reader.onloadend = () => {
+                        const base64data = reader.result;
+                        resolve(base64data);
+                    };
+                });
+            };
+
+            const source = getBase64FromUrl(URL.createObjectURL(imageWriterResult.dest));
+            fetch(
+                `https://upload.${getProp(this.options, 'appHost').replace('https://', '')}/2.0/files/${getProp(
+                    this.options,
+                    'file.id',
+                )}/content`,
+                {
+                    headers,
+                    method: 'POST',
+                    body: JSON.stringify({
+                        file: source,
+                    }),
+                    mode: 'no-cors',
+                },
+            )
+                .then(data => {
+                    console.log('fetch', data);
+                })
+                .catch(err => {
+                    console.log(err);
+                });
+        });
     }
 
     /**
@@ -102,6 +143,7 @@ class ImageViewer extends ImageBaseViewer {
         this.imageEl = this.wrapperEl.appendChild(document.createElement('img'));
         this.imageEl.setAttribute('crossorigin', 'anonymous');
         this.imageEl.setAttribute('data-page-number', 1);
+        this.imageEl.setAttribute('crossorigin', 'anonymous');
 
         // hides image tag until content is loaded
         this.imageEl.classList.add(CLASS_INVISIBLE);
