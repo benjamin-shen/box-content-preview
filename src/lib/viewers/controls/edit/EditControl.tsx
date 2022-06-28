@@ -1,5 +1,5 @@
 import React from 'react';
-import IconRotate24 from '../icons/IconRotate24';
+import IconEdit24 from '../icons/IconEdit24';
 import './EditControl.scss';
 
 export type Props = {
@@ -9,7 +9,7 @@ export type Props = {
 export default function EditControl({ onEditImageClick }: Props): JSX.Element {
     return (
         <button className="bp-EditControl" onClick={onEditImageClick} title={__('edit_image')} type="button">
-            <IconRotate24 />
+            <IconEdit24 />
         </button>
     );
 }
