@@ -3,6 +3,8 @@ import getProp from 'lodash/get';
 import AnnotationControlsFSM, { AnnotationInput, AnnotationMode, AnnotationState } from '../../AnnotationControlsFSM';
 import ImageBaseViewer from './ImageBaseViewer';
 import ImageControls from './ImageControls';
+import { appendDefaultEditor } from '../../packages/pintura/pintura.js';
+
 import {
     ANNOTATOR_EVENT,
     CLASS_ANNOTATIONS_IMAGE_FTUX_CURSOR_SEEN,
@@ -11,6 +13,7 @@ import {
     IMAGE_FTUX_CURSOR_SEEN_KEY,
 } from '../../constants';
 import './Image.scss';
+import '../../packages/pintura/pintura.css';
 
 const CSS_CLASS_IMAGE = 'bp-image';
 const IMAGE_PADDING = 15;
@@ -30,6 +33,7 @@ class ImageViewer extends ImageBaseViewer {
         this.handleAnnotationCreateEvent = this.handleAnnotationCreateEvent.bind(this);
         this.handleAssetAndRepLoad = this.handleAssetAndRepLoad.bind(this);
         this.handleEditImageClick = this.handleEditImageClick.bind(this);
+        this.loadImageEditor = this.loadImageEditor.bind(this);
         this.handleImageDownloadError = this.handleImageDownloadError.bind(this);
         this.handleZoomEvent = this.handleZoomEvent.bind(this);
         this.rotateLeft = this.rotateLeft.bind(this);
@@ -49,6 +53,14 @@ class ImageViewer extends ImageBaseViewer {
         }
     }
 
+    loadImageEditor() {
+        // console.log("HOLA SRC", this.imageEl.getAttribute('src'))
+        const editor = appendDefaultEditor('.pintura', {
+            src: 'https://dl.megansmith.inside-box.net/api/2.0/internal_files/9440494035/versions/28531560403/representations/png_paged_2048x2048/content/1.png?access_token=1!OXhshiVhZ6LnxKBjx19QvBFb4AwBkmkQAGhOEySSjzwDgsD8uCzQWb_67_72PIXWRYy6kgvneOdfsLUeFtRTg8mMhkTpdi21hxEI1IoLDH2QZ5eV37FHenW7DsiRNboMn9vrPHRv75t3ycT4PRJJmA-NcCjMyeSXps66saib1y8H7eP5v6vFzgu7-kof-vLUFij5EMF6tqfcJkNwB5Jp0yAuMNeAPT0Xf3NAnslm-OkrgYmyVNk8tJsfFc6DfCOQfNWAMrcXaeNbe89RGYhJwABS4TkKUk4dJoZIWATFGe8HOLK8UhZqj1x9pze3JJtMjD4CFNpqC7Qyv0TQRdHfVu0bQM_y8soQQPzx6Tdf93rNVols80kLuX5LMjAFzvm56kaXC-G0xREg5z9urMuRr8NvqqxSJkR0kaNYYWLq9dFnIjhBGKbW2pc66WetYJSXXOinE-CD9TXwIG9-IoR44BPsJW8JnEU-KGhGHPMR2U_4lgI-xM4L4Np8Ln1pOP_IhakG0SHVTE3V_Ncg8jnUGIH0V1bkfHu9MFNVpm3kVVVm25CgQiayM785DeEfLdjzaA0F6ie_c8LhE04k9eo06K4uvZ0abxn5eRu_hhJcBASgtJIk0rC57UwqoD4PMcZORusFTM8IdQm9s2T-sODb7sEoOJ1kFd3xi0-mzg..&box_client_name=box-content-preview&box_client_version=2.84.0',
+            // src: this.imageEl.getAttribute('src'),
+            imageCropAspectRatio: 1,
+        });
+    }
     /**
      * [destructor]
      *
@@ -92,6 +104,15 @@ class ImageViewer extends ImageBaseViewer {
         }
 
         this.updateDiscoverabilityResinTag();
+
+        const pinturaEl = document.createElement('div');
+        pinturaEl.classList.add('pintura');
+        pinturaEl.style.height = '100%';
+        pinturaEl.style.width = '100%';
+        document.querySelector('.bp-content').appendChild(pinturaEl);
+
+        const imageEl = document.querySelector('.bp-image');
+        imageEl.style.display = 'none';
     }
 
     /**
@@ -107,9 +128,11 @@ class ImageViewer extends ImageBaseViewer {
         const downloadUrl = this.createContentUrlWithAuthParams(template, viewer.ASSET);
 
         this.bindDOMListeners();
+
         return this.getRepStatus()
             .getPromise()
             .then(() => this.handleAssetAndRepLoad(downloadUrl))
+            .then(() => this.loadImageEditor())
             .catch(this.handleAssetError);
     }
 
