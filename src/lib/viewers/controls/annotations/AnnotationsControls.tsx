@@ -97,18 +97,6 @@ export default function AnnotationsControls({
             >
                 <IconExit24 />
             </AnnotationsButton>
-            <AnnotationsButton
-                ref={annotationBtnRefs[AnnotationMode.DRAWING]}
-                data-resin-target="draw"
-                data-testid="bp-AnnotationsControls-drawBtn"
-                isActive={isDrawingActive}
-                isEnabled={showDrawing}
-                mode={AnnotationMode.DRAWING}
-                onClick={handleModeClick}
-                title={__('drawing_comment')}
-            >
-                <IconDrawing24 fill={isDrawingActive ? annotationColor : '#fff'} />
-            </AnnotationsButton>
             <AnnotationsTargetedTooltip isEnabled={showRegion}>
                 <AnnotationsButton
                     ref={annotationBtnRefs[AnnotationMode.REGION]}
