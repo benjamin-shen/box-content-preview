@@ -4,11 +4,13 @@ import ControlsBar, { ControlsBarGroup } from '../controls/controls-bar';
 import DrawingControls, { Props as DrawingControlsProps } from '../controls/annotations/DrawingControls';
 import ExperiencesProvider, { Props as ExperiencesProviderProps } from '../controls/experiences';
 import FullscreenToggle, { Props as FullscreenToggleProps } from '../controls/fullscreen';
+import EditControl, { Props as EditControlProps } from '../controls/edit';
 import RotateControl, { Props as RotateControlProps } from '../controls/rotate';
 import ZoomControls, { Props as ZoomControlsProps } from '../controls/zoom';
 
 export type Props = AnnotationsControlsProps &
     DrawingControlsProps &
+    EditControlProps &
     ExperiencesProviderProps &
     FullscreenToggleProps &
     RotateControlProps &
@@ -24,6 +26,7 @@ export default function ImageControls({
     onAnnotationColorChange,
     onAnnotationModeClick,
     onAnnotationModeEscape,
+    onEditImageClick,
     onFullscreenToggle,
     onRotateLeft,
     onZoomIn,
@@ -48,6 +51,7 @@ export default function ImageControls({
                         onAnnotationModeClick={onAnnotationModeClick}
                         onAnnotationModeEscape={onAnnotationModeEscape}
                     />
+                    <EditControl onEditImageClick={onEditImageClick} />
                 </ControlsBarGroup>
             </ControlsBar>
             <ControlsBar>
