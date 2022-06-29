@@ -1,5 +1,6 @@
 import React from 'react';
 import getProp from 'lodash/get';
+import PlainUpload from 'box-ui-elements/es/api/uploads/PlainUpload';
 import AnnotationControlsFSM, { AnnotationInput, AnnotationMode, AnnotationState } from '../../AnnotationControlsFSM';
 import ImageBaseViewer from './ImageBaseViewer';
 import ImageControls from './ImageControls';
@@ -54,6 +55,46 @@ class ImageViewer extends ImageBaseViewer {
         }
     }
 
+    getCookie = name => {
+        return (
+            ('; ' + document.cookie)
+                .split('; ' + name + '=')
+                .pop()
+                .split(';')
+                .shift() || null
+        );
+    };
+
+    getConfig = propertyName => {
+        if (window.Box && window.Box.config && {}.hasOwnProperty.call(window.Box.config, propertyName)) {
+            return window.Box.config[propertyName];
+        }
+
+        return null;
+    };
+
+    getUploadToken = async fileId => {
+        const data = new FormData();
+        data.append('file_id', fileId);
+
+        const requestToken = this.getConfig('requestToken');
+        const crsfToken = this.getCookie('csrf-token');
+
+        const response = await fetch('/index.php?rm=box_upload_get_scoped_token', {
+            method: 'POST',
+            credentials: 'same-origin',
+            headers: new Headers({
+                'X-CSRF-TOKEN': crsfToken,
+                'Request-Token': requestToken,
+                'X-Request-Token': requestToken,
+            }),
+            body: data,
+        });
+
+        const { access_token: token } = await response.json();
+        return token;
+    };
+
     loadImageEditor() {
         const previewEl = document.querySelector('.preview-body');
         const pinturaEl = document.createElement('div');
@@ -71,45 +112,45 @@ class ImageViewer extends ImageBaseViewer {
 
         // Remove header buttons
         document.querySelector('.preview-header-right').remove();
-        console.log(this.options);
 
-        editor.on('process', imageWriterResult => {
-            const { token } = this.options;
-            const headers = getHeaders({ 'Content-Type': 'multipart/form-data' }, token);
-            const getBase64FromUrl = async url => {
-                const data = await fetch(url);
-                const blob = await data.blob();
-                return new Promise(resolve => {
-                    const reader = new FileReader();
-                    reader.readAsDataURL(blob);
-                    reader.onloadend = () => {
-                        const base64data = reader.result;
-                        resolve(base64data);
-                    };
-                });
+        editor.on('process', async imageWriterResult => {
+            const fileId = getProp(this.options, 'file.id');
+            const fileName = getProp(this.options, 'file.name');
+            const fileType = getProp(this.options, 'file.type');
+
+            const token = await this.getUploadToken(fileId);
+
+            const options = {
+                id: `file_${fileId}`,
+                token,
+                apiHost: this.options.apiHost,
             };
+            const uploader = new PlainUpload(options);
 
-            const source = getBase64FromUrl(URL.createObjectURL(imageWriterResult.dest));
-            fetch(
-                `https://upload.${getProp(this.options, 'appHost').replace('https://', '')}/2.0/files/${getProp(
-                    this.options,
-                    'file.id',
-                )}/content`,
-                {
-                    headers,
-                    method: 'POST',
-                    body: JSON.stringify({
-                        file: source,
-                    }),
-                    mode: 'no-cors',
-                },
-            )
-                .then(data => {
-                    console.log('fetch', data);
-                })
-                .catch(err => {
-                    console.log(err);
+            const file = new File([URL.createObjectURL(imageWriterResult.dest)], fileName, {
+                type: fileType,
+            });
+
+            const request = new Promise((resolve, reject) => {
+                uploader.upload({
+                    file,
+                    fileDescription: null,
+                    fileId,
+                    folderId: '0',
+                    overwrite: true,
+                    successCallback: resolve,
+                    errorCallback: reject,
                 });
+            });
+
+            let res;
+            try {
+                res = await request;
+            } catch (error) {
+                console.log(error.message);
+            }
+            const [uploadedFile] = res;
+            console.log(uploadedFile);
         });
     }
 
