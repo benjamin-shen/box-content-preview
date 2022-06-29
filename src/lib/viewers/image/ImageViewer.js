@@ -94,6 +94,14 @@ class ImageViewer extends ImageBaseViewer {
         return token;
     };
 
+    reloadImage() {
+        console.log('reload start');
+        this.destroy();
+        this.setup();
+        this.load();
+        console.log('reload end');
+    }
+
     loadImageEditor() {
         const previewEl = document.querySelector('.preview-body');
         const pinturaEl = document.createElement('div');
@@ -103,9 +111,13 @@ class ImageViewer extends ImageBaseViewer {
         pinturaEl.style.width = '100%';
 
         previewEl.appendChild(pinturaEl);
-        previewEl.removeChild(previewEl.firstChild);
+        const previewImage = previewEl.firstChild;
+        previewImage.classList.add(CLASS_INVISIBLE);
 
-        appendDefaultEditor('.pintura', {
+        const previewHeaderRight = document.querySelector('.preview-header-right');
+        previewHeaderRight.classList.add(CLASS_INVISIBLE);
+
+        const editor = appendDefaultEditor('.pintura', {
             src: this.imageEl.getAttribute('src'),
             imageWriter: {
                 store: async state => {
@@ -127,7 +139,21 @@ class ImageViewer extends ImageBaseViewer {
                         type: fileType,
                     });
 
-                    const request = new Promise((resolve, reject) => {
+                    // const request = new Promise((resolve, reject) => {
+                    //     uploader.upload({
+                    //         file,
+                    //         fileDescription: null,
+                    //         fileId,
+                    //         folderId: '0',
+                    //         overwrite: true,
+                    //         successCallback: resolve,
+                    //         errorCallback: reject,
+                    //     });
+                    // });
+
+                    // return request;
+
+                    return new Promise((resolve, reject) => {
                         uploader.upload({
                             file,
                             fileDescription: null,
@@ -137,15 +163,28 @@ class ImageViewer extends ImageBaseViewer {
                             successCallback: resolve,
                             errorCallback: reject,
                         });
+                        // .then(() => {
+                        //     console.log('hi');
+                        //     // window.location.reload();
+                        //     // pinturaEl.remove();
+                        //     // previewImage.classList.remove(CLASS_INVISIBLE);
+                        //     // previewHeaderRight.classList.remove(CLASS_INVISIBLE);
+                        //     // this.reloadImage();
+                        // })
+                        // .catch(err => console.log(err.message));
                     });
-
-                    await request.then(window.location.reload()).catch(error => console.log(error.message));
                 },
             },
         });
 
-        // Remove header buttons
-        document.querySelector('.preview-header-right').remove();
+        editor.on('process', async imageWriterResult => {
+            console.log('hi');
+            window.location.reload();
+            // pinturaEl.remove();
+            // previewImage.classList.remove(CLASS_INVISIBLE);
+            // previewHeaderRight.classList.remove(CLASS_INVISIBLE);
+            // this.reloadImage();
+        });
     }
 
     /**
