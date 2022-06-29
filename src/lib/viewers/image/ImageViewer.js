@@ -15,7 +15,6 @@ import {
 } from '../../constants';
 import './Image.scss';
 import '../../packages/pintura/pintura.css';
-import { getHeaders } from '../../util';
 
 const CSS_CLASS_IMAGE = 'bp-image';
 const IMAGE_PADDING = 15;
@@ -106,51 +105,47 @@ class ImageViewer extends ImageBaseViewer {
         previewEl.appendChild(pinturaEl);
         previewEl.removeChild(previewEl.firstChild);
 
-        const editor = appendDefaultEditor('.pintura', {
+        appendDefaultEditor('.pintura', {
             src: this.imageEl.getAttribute('src'),
+            imageWriter: {
+                store: async state => {
+                    const { dest } = state;
+                    const fileId = getProp(this.options, 'file.id');
+                    const fileName = getProp(this.options, 'file.name');
+                    const fileType = getProp(this.options, 'file.type');
+
+                    const token = await this.getUploadToken(fileId);
+
+                    const options = {
+                        id: `file_${fileId}`,
+                        token,
+                        apiHost: this.options.apiHost,
+                    };
+                    const uploader = new PlainUpload(options);
+
+                    const file = new File([new Blob([dest])], fileName, {
+                        type: fileType,
+                    });
+
+                    const request = new Promise((resolve, reject) => {
+                        uploader.upload({
+                            file,
+                            fileDescription: null,
+                            fileId,
+                            folderId: '0',
+                            overwrite: true,
+                            successCallback: resolve,
+                            errorCallback: reject,
+                        });
+                    });
+
+                    await request.then(window.location.reload()).catch(error => console.log(error.message));
+                },
+            },
         });
 
         // Remove header buttons
         document.querySelector('.preview-header-right').remove();
-
-        editor.on('process', async imageWriterResult => {
-            const fileId = getProp(this.options, 'file.id');
-            const fileName = getProp(this.options, 'file.name');
-            const fileType = getProp(this.options, 'file.type');
-
-            const token = await this.getUploadToken(fileId);
-
-            const options = {
-                id: `file_${fileId}`,
-                token,
-                apiHost: this.options.apiHost,
-            };
-            const uploader = new PlainUpload(options);
-
-            const file = new File([new Blob([imageWriterResult.dest])], fileName, {
-                type: fileType,
-            });
-
-            const request = new Promise((resolve, reject) => {
-                uploader.upload({
-                    file,
-                    fileDescription: null,
-                    fileId,
-                    folderId: '0',
-                    overwrite: true,
-                    successCallback: resolve,
-                    errorCallback: reject,
-                });
-            });
-
-            let res;
-            try {
-                res = await request;
-            } catch (error) {
-                console.log(error.message);
-            }
-            const [uploadedFile] = res;
-        });
     }
 
     /**
