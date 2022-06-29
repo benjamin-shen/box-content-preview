@@ -94,34 +94,29 @@ class ImageViewer extends ImageBaseViewer {
         return token;
     };
 
-    reloadImage() {
-        console.log('reload start');
-        this.destroy();
-        this.setup();
-        this.load();
-        console.log('reload end');
-    }
-
     loadImageEditor() {
         const previewEl = document.querySelector('.preview-body');
-        const pinturaEl = document.createElement('div');
-
-        pinturaEl.classList.add('pintura');
-        pinturaEl.style.height = '100%';
-        pinturaEl.style.width = '100%';
-
-        previewEl.appendChild(pinturaEl);
         const previewImage = previewEl.firstChild;
         previewImage.classList.add(CLASS_INVISIBLE);
 
         const previewHeaderRight = document.querySelector('.preview-header-right');
         previewHeaderRight.classList.add(CLASS_INVISIBLE);
 
+        const pinturaEl = document.createElement('div');
+        pinturaEl.classList.add('pintura');
+        pinturaEl.style.height = '100%';
+        pinturaEl.style.width = '100%';
+        previewEl.appendChild(pinturaEl);
+
+        let newImageUrl;
+
         const editor = appendDefaultEditor('.pintura', {
             src: this.imageEl.getAttribute('src'),
             imageWriter: {
                 store: async state => {
                     const { dest } = state;
+                    newImageUrl = URL.createObjectURL(dest);
+
                     const fileId = getProp(this.options, 'file.id');
                     const fileName = getProp(this.options, 'file.name');
                     const fileType = getProp(this.options, 'file.type');
@@ -139,20 +134,6 @@ class ImageViewer extends ImageBaseViewer {
                         type: fileType,
                     });
 
-                    // const request = new Promise((resolve, reject) => {
-                    //     uploader.upload({
-                    //         file,
-                    //         fileDescription: null,
-                    //         fileId,
-                    //         folderId: '0',
-                    //         overwrite: true,
-                    //         successCallback: resolve,
-                    //         errorCallback: reject,
-                    //     });
-                    // });
-
-                    // return request;
-
                     return new Promise((resolve, reject) => {
                         uploader.upload({
                             file,
@@ -163,27 +144,20 @@ class ImageViewer extends ImageBaseViewer {
                             successCallback: resolve,
                             errorCallback: reject,
                         });
-                        // .then(() => {
-                        //     console.log('hi');
-                        //     // window.location.reload();
-                        //     // pinturaEl.remove();
-                        //     // previewImage.classList.remove(CLASS_INVISIBLE);
-                        //     // previewHeaderRight.classList.remove(CLASS_INVISIBLE);
-                        //     // this.reloadImage();
-                        // })
-                        // .catch(err => console.log(err.message));
                     });
                 },
             },
         });
 
-        editor.on('process', async imageWriterResult => {
-            console.log('hi');
-            window.location.reload();
-            // pinturaEl.remove();
-            // previewImage.classList.remove(CLASS_INVISIBLE);
-            // previewHeaderRight.classList.remove(CLASS_INVISIBLE);
-            // this.reloadImage();
+        editor.on('process', () => {
+            if (!newImageUrl) {
+                window.location.reload();
+            } else {
+                pinturaEl.remove();
+                previewImage.classList.remove(CLASS_INVISIBLE);
+                previewHeaderRight.classList.remove(CLASS_INVISIBLE);
+                this.handleAssetAndRepLoad(newImageUrl);
+            }
         });
     }
 
