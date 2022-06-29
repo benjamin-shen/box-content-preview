@@ -127,7 +127,7 @@ class ImageViewer extends ImageBaseViewer {
             };
             const uploader = new PlainUpload(options);
 
-            const file = new File([URL.createObjectURL(imageWriterResult.dest)], fileName, {
+            const file = new File([new Blob([imageWriterResult.dest])], fileName, {
                 type: fileType,
             });
 
@@ -150,7 +150,6 @@ class ImageViewer extends ImageBaseViewer {
                 console.log(error.message);
             }
             const [uploadedFile] = res;
-            console.log(uploadedFile);
         });
     }
 
